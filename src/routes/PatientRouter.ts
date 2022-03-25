@@ -8,5 +8,6 @@ export default class PatientRouter {
   ) {
     this.router.get("/patients", patientController.index);
     this.router.get("/patients/:id", patientController.show);
+    this.router.post("/patients", patientController.create);
   }
 }

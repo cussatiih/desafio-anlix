@@ -30,6 +30,10 @@ module.exports = {
         allowNull: false,
         field: "birth_date",
       },
+      sex: {
+        type: Sequelize.STRING,
+        allowNull: false,
+      },
       sign: {
         type: Sequelize.STRING,
       },

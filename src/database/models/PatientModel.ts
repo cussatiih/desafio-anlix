@@ -10,6 +10,7 @@ export default class PatientModel extends Model {
   private cpf!: string;
   private rg!: string;
   private birthDate!: string;
+  private sex!: string;
   private sign!: string;
   private motherName!: string;
   private fatherName!: string;
@@ -70,6 +71,11 @@ PatientModel.init(
     },
     birthDate: {
       type: DataTypes.DATEONLY,
+      allowNull: false,
+      defaultValue: "",
+    },
+    sex: {
+      type: DataTypes.STRING,
       allowNull: false,
       defaultValue: "",
     },
