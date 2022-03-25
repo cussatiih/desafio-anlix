@@ -1,7 +1,8 @@
 import env from "dotenv-safe";
 import express from "express";
-import { Request, Response } from "express";
 import cors from "cors";
+import PatientRouter from "./routes/PatientRouter";
+import PatientController from "./controllers/PatientController";
 
 export default class Server {
   private app: express.Application;
@@ -19,9 +20,7 @@ export default class Server {
   }
 
   public routes(): void {
-    this.app.get("/", (req: Request, res: Response) => {
-      return res.json({ message: "Hello World" });
-    });
+    new PatientRouter(this.app, new PatientController());
   }
 
   public start(): void {

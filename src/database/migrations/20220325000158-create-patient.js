@@ -28,15 +28,18 @@ module.exports = {
       birthDate: {
         type: Sequelize.DATEONLY,
         allowNull: false,
+        field: "birth_date",
       },
       sign: {
         type: Sequelize.STRING,
       },
       motherName: {
         type: Sequelize.STRING,
+        field: "mother_name",
       },
       fatherName: {
         type: Sequelize.STRING,
+        field: "father_name",
       },
       email: {
         type: Sequelize.STRING,
@@ -49,12 +52,14 @@ module.exports = {
       },
       zipCode: {
         type: Sequelize.STRING,
+        field: "zip_code",
       },
       address: {
         type: Sequelize.STRING,
       },
       addressNumber: {
         type: Sequelize.INTEGER,
+        field: "address_number",
       },
       district: {
         type: Sequelize.STRING,
@@ -70,6 +75,7 @@ module.exports = {
       },
       mobilePhone: {
         type: Sequelize.STRING,
+        field: "mobile_phone",
       },
       height: {
         type: Sequelize.FLOAT,
@@ -80,9 +86,18 @@ module.exports = {
       bloodType: {
         type: Sequelize.STRING,
         allowNull: false,
+        field: "blood_type",
       },
       color: {
         type: Sequelize.STRING,
+      },
+      created_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
+      },
+      updated_at: {
+        type: Sequelize.DATE,
+        allowNull: false,
       },
     });
   },
